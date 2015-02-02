@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Projects</h1>
+
+<%= render 'list' %>
+
+<br>
+
+<%= link_to 'New Project', new_user_project_path(@user) if @user%>

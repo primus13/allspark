@@ -1,0 +1,3 @@
+Just a simple TODO list:
+
+- Userfiles attachment validation(define some kind of content-type in order to not allow EVERYTHING)
