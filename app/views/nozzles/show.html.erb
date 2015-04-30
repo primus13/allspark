@@ -1,0 +1,12 @@
+<h1>Show Nozzle</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @nozzle.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @nozzle.description %>
+</p>
+<td><%= link_to 'Edit', edit_nozzle_path(@nozzle) %></td>
+<%= link_to 'Back', nozzles_path %>

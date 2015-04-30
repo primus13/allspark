@@ -1,0 +1,25 @@
+<%= form_for ([@user, @user_printer]) do |f| %>
+  <% if @user_printer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_printer.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @user_printer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+  <p><%= f.label :printer %><br>
+  	<%= f.collection_select(:printer_id, Printer.all, :id, :name, :prompt => true) %><br>
+  </p>
+
+  
+    
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<h1><%= @user_printer.printer.name %></h1>
+
+<p>
+  <%= @user_printer.printer.description %>
+</p>
+
+<p>
+    
+</p>
+
+
+<% if current_user == @user_printer.user %>
+    
+    <%= link_to 'Edit UserPrinter', edit_user_printer_path(@user_printer) %>
+<% end %>

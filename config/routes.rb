@@ -6,13 +6,44 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
       resources :projects, shallow: true
+      resources :user_printers, shallow: true
   end
 
   resources :projects do
       resources :userfiles, shallow: true
   end
+  
+  #resources :printers do
+  #  resources :user_printers
+  #end
+  
+  resources :user_printers
 
   resources :userfiles
+  
+  resources :manufacturers
+  
+  resources :categories
+  
+  resources :devices
+  
+  resources :printers
+  
+  resources :materials
+  
+  resources :colorfamilies
+  
+  resources :colors
+  
+  resources :filaments
+  
+  resources :nozzles
+  
+  resources :heatbeds
+  
+  resources :hotends
+  
+  
   
   # API related
   

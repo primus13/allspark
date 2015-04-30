@@ -1,0 +1,12 @@
+<h1>Show Material</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @material.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @material.description %>
+</p>
+<td><%= link_to 'Edit', edit_material_path(@material) %></td>
+<%= link_to 'Back', materials_path %>

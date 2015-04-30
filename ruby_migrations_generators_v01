@@ -1,27 +1,60 @@
-rails generate model Material name:string description:text
+rails generate model Country name:string
 
-rails generate model Color name:string description:text
+rails generate model Material name:string code:string scientificname:string description:text
 
-rails generate model Manufacturer name:string description:text
+rails generate model Colorfamily name:string code:string description:text
 
-rails generate model Printer name:string description:text manufacturer:references
+rails generate model Color name:string code:string description:text colorfamily:references{required}
 
-rails generate model Nozzle name:string description:text manufacturer:references
+rails generate model Category name:string description:text
 
-rails generate model Filament name:string description:text manufacturer:references material:references
+rails generate model Manufacturer name:string description:text category:references
 
-# Maybe!? just referencing to a setting from User_Setting to have a setting history without changing data, just update via creating a new setting entry everytime the settings change???
+rails generate model Device name:string description:text manufacturer:references category:references
+
+rails generate model Printer name:string description:text manufacturer:references category:references device:references
+
+rails generate model Nozzle name:string description:text manufacturer:references category:references
+
+rails generate model Heatbed name:string description:text manufacturer:references category:references
+
+rails generate model Hotend name:string description:text manufacturer:references category:references
+
+rails generate model Filament name:string{required} description:text manufacturer:references{required} material:references{required} category:references
+
+rails generate model Technology name:string description:text category:references
+
+rails generate model Variant technology:references{required} diameter:float
+
+rails generate model FilamentVariant filament:references{required} variant:references{required}
+
+rails generate model FilamentColor filament:references{required} color:references{required}
+
+rails generate model Uniquefilament filament_variant:references{required} filament_color:references{required}
+
+rails generate model UserUniquefilament user:references{required} uniquefilament:references{required}
+
+
+rails generate model UserPrinter user:references{required} printer:references{required}
+
+rails generate model UserNozzle user:references{required} nozzle:references{required} user_printer:references
+
+rails generate model UserHeatbed user:references{required} heatbed:references{required} user_printer:references
+
+rails generate model UserHotend user:references{required} hotend:references{required} user_printer:references
+
 rails generate model Setting name:string description:text
 
-rails generate model Filament_Color filament:references{required} color:references{required}
-
-rails generate model User_Printer user:references{required} printer:references{required}
-
-rails generate model User_Nozzle user:references{required} nozzle:references{required}
-
-rails generate model User_Filament_Color user:references{required} filament_color:references{required}
 
 
-rails generate model User_Setup user:references{required} user_printer:references{required} user_nozzle:references{required} user_filament_color:references{required} 
 
-rails generate model User_Setting user:references{required} user_setup:references{required} 
+
+rails generate model UserFilamentVariant user:references{required} filament_variant:references{required} user_printer:references
+
+
+rails generate model UserPrinterSetup user:references{required} user_printer:references{required} user_nozzle:references user_heatbed:references user_hotend:references
+
+rails generate model UserPrinterSetting user:references{required} user_printer_setup:references{required} user_filament_variant:references{required} print_speed:float nozzle_size:float
+
+
+

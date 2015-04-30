@@ -1,0 +1,18 @@
+<h1>Listing printers</h1>
+ <%= link_to 'New printer', new_printer_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @printers.each do |printer| %>
+    <tr>
+      <td><%= link_to printer.name, printer_path(printer) %></td>
+      <td><%= printer.description %></td>
+      <td><%= link_to 'Show', printer_path(printer) %></td>
+      <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
+      <td><%= link_to 'Destroy', printer_path(printer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

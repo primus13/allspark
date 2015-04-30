@@ -1,0 +1,33 @@
+rails g controller countries
+
+rails g controller manufacturers
+
+rails g controller categories
+
+rails g controller devices
+
+rails g controller printers
+
+rails g controller nozzles
+
+rails g controller heatbeds
+
+rails g controller hotends
+
+rails g controller colorfamilies
+
+rails g controller colors
+
+rails g controller materials
+
+rails g controller technologies
+
+rails g controller variants
+
+rails g controller filaments
+
+rails g controller filament_variants
+
+rails g controller user_printers
+
+rails g controller user_filaments

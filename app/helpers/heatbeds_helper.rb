@@ -1,0 +1,2 @@
+module HeatbedsHelper
+end

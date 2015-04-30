@@ -1,0 +1,12 @@
+<h1>Show Heatbed</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @heatbed.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @heatbed.description %>
+</p>
+<td><%= link_to 'Edit', edit_heatbed_path(@heatbed) %></td>
+<%= link_to 'Back', heatbeds_path %>

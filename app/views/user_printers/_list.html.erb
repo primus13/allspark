@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @user_printers.each do |user_printer| %>
+    <tr>
+      <td><%= link_to user_printer.printer.name, printer_path(user_printer.printer) %></td>
+      <td><%= user_printer.printer.description %></td>
+      <td><%= link_to 'Show', user_printer_path(user_printer) %></td>
+      <td><%= link_to 'Edit', edit_user_printer_path(user_printer) %></td>
+      <td><%= link_to 'Destroy', user_printer_path(user_printer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

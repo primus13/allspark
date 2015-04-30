@@ -1,0 +1,12 @@
+<h1>Show Colorfamily</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @colorfamily.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @colorfamily.description %>
+</p>
+<td><%= link_to 'Edit', edit_colorfamily_path(@colorfamily) %></td>
+<%= link_to 'Back', colorfamilies_path %>

@@ -1,0 +1,2 @@
+class UniquefilamentsController < ApplicationController
+end

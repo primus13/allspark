@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :projects
+  has_many :user_printers
 
   def to_s
     self.email

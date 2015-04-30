@@ -1,0 +1,18 @@
+<h1>Listing materials</h1>
+ <%= link_to 'New material', new_material_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @materials.each do |material| %>
+    <tr>
+      <td><%= link_to material.name, material_path(material) %></td>
+      <td><%= material.description %></td>
+      <td><%= link_to 'Show', material_path(material) %></td>
+      <td><%= link_to 'Edit', edit_material_path(material) %></td>
+      <td><%= link_to 'Destroy', material_path(material), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

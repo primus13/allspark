@@ -1,0 +1,18 @@
+<h1>Listing nozzles</h1>
+ <%= link_to 'New nozzle', new_nozzle_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @nozzles.each do |nozzle| %>
+    <tr>
+      <td><%= link_to nozzle.name, nozzle_path(nozzle) %></td>
+      <td><%= nozzle.description %></td>
+      <td><%= link_to 'Show', nozzle_path(nozzle) %></td>
+      <td><%= link_to 'Edit', edit_nozzle_path(nozzle) %></td>
+      <td><%= link_to 'Destroy', nozzle_path(nozzle), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

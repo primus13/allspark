@@ -1,0 +1,12 @@
+<h1>Show Manufacturer</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @manufacturer.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @manufacturer.description %>
+</p>
+<td><%= link_to 'Edit', edit_manufacturer_path(@manufacturer) %></td>
+<%= link_to 'Back', manufacturers_path %>

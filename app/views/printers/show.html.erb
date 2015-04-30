@@ -1,0 +1,12 @@
+<h1>Show Printer</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @printer.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @printer.description %>
+</p>
+<td><%= link_to 'Edit', edit_printer_path(@printer) %></td>
+<%= link_to 'Back', printers_path %>

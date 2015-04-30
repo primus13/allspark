@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  technology_id: 
+  diameter: 1.5
+
+two:
+  technology_id: 
+  diameter: 1.5

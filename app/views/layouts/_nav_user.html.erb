@@ -1,2 +1,24 @@
 <li><%= link_to "My Projects", user_projects_path(current_user)  %></li>
+
+<li><%= link_to "My Printer", user_user_printers_path(current_user)  %></li>
+
+<li><%= link_to "Categories", categories_path  %></li>
+
+<li><%= link_to "Manufacturers", manufacturers_path  %></li>
+
+<li><%= link_to "Materials", materials_path  %></li>
+
+<li><%= link_to "Filaments", filaments_path  %></li>
+
+<li><%= link_to "Colorfamilies", colorfamilies_path  %></li>
+<li><%= link_to "Colors", colors_path  %></li>
+
+<li><%= link_to "Devices", devices_path  %></li>
+
+<li><%= link_to "Heatbeds", heatbeds_path  %></li>
+<li><%= link_to "Hotends", hotends_path  %></li>
+
+<li><%= link_to "Nozzles", nozzles_path  %></li>
+<li><%= link_to "Printers", printers_path  %></li>
+
 <li><%= link_to "Sign out", destroy_user_session_path, {method: :delete}  %></li>

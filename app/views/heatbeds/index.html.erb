@@ -1,0 +1,18 @@
+<h1>Listing heatbeds</h1>
+ <%= link_to 'New heatbed', new_heatbed_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @heatbeds.each do |heatbed| %>
+    <tr>
+      <td><%= link_to heatbed.name, heatbed_path(heatbed) %></td>
+      <td><%= heatbed.description %></td>
+      <td><%= link_to 'Show', heatbed_path(heatbed) %></td>
+      <td><%= link_to 'Edit', edit_heatbed_path(heatbed) %></td>
+      <td><%= link_to 'Destroy', heatbed_path(heatbed), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

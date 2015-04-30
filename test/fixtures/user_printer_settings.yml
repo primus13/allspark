@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  user_printer_setup_id: 
+  user_filament_variant_id: 
+  print_speed: 1.5
+  nozzle_size: 1.5
+
+two:
+  user_id: 
+  user_printer_setup_id: 
+  user_filament_variant_id: 
+  print_speed: 1.5
+  nozzle_size: 1.5

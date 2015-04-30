@@ -1,0 +1,2 @@
+module UserPrintersHelper
+end

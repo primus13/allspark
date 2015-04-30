@@ -1,0 +1,23 @@
+<h1>Show Filament</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @filament.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @filament.description %>
+</p>
+
+<p>
+  <strong>Material</strong>
+  <%= @filament.material.name %>
+</p>
+<p>
+  <strong>Manufacturer</strong>
+  <%= @filament.manufacturer.name %>
+</p>
+
+
+<td><%= link_to 'Edit', edit_filament_path(@filament) %></td>
+<%= link_to 'Back', filaments_path %>

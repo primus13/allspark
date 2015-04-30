@@ -1,0 +1,12 @@
+<h1>Show Hotend</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @hotend.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @hotend.description %>
+</p>
+<td><%= link_to 'Edit', edit_hotend_path(@hotend) %></td>
+<%= link_to 'Back', hotends_path %>

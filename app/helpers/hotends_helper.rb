@@ -1,0 +1,2 @@
+module HotendsHelper
+end
