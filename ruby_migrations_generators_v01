@@ -28,9 +28,9 @@ rails generate model Variant technology:references{required} diameter:float
 
 rails generate model FilamentVariant filament:references{required} variant:references{required}
 
-rails generate model FilamentColor filament:references{required} color:references{required}
+## rails generate model FilamentColor filament:references{required} color:references{required} ##
 
-rails generate model Uniquefilament filament_variant:references{required} filament_color:references{required}
+rails generate model Uniquefilament filament_variant:references{required} color:references{required}
 
 rails generate model UserUniquefilament user:references{required} uniquefilament:references{required}
 

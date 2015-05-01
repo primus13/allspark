@@ -1,0 +1,2 @@
+class FilamentColorsController < ApplicationController
+end

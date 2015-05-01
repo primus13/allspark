@@ -21,27 +21,55 @@ Rails.application.routes.draw do
 
   resources :userfiles
   
+  resources :countries
+  
   resources :manufacturers
   
   resources :categories
   
+  resources :technologies
+  
+  
+  
+  
   resources :devices
   
   resources :printers
-  
-  resources :materials
-  
-  resources :colorfamilies
-  
-  resources :colors
-  
-  resources :filaments
   
   resources :nozzles
   
   resources :heatbeds
   
   resources :hotends
+  
+  resources :user_nozzles
+  
+  resources :user_heatbeds
+  
+  resources :user_hotends
+  
+  resources :user_printer_setups
+  
+  
+  
+  
+  resources :colorfamilies
+  
+  resources :colors
+  
+  resources :materials
+  
+  resources :variants
+  
+  resources :filaments
+  
+  resources :filament_colors
+  
+  resources :filament_variants
+  
+  resources :uniquefilaments
+  
+  resources :user_uniquefilaments
   
   
   

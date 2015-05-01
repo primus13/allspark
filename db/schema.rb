@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430184305) do
+ActiveRecord::Schema.define(version: 20150501095955) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -327,8 +327,11 @@ ActiveRecord::Schema.define(version: 20150430184305) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.integer  "country_id"
   end
 
+  add_index "users", ["country_id"], name: "index_users_on_country_id"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
@@ -337,6 +340,7 @@ ActiveRecord::Schema.define(version: 20150430184305) do
     t.float    "diameter"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "name"
   end
 
   add_index "variants", ["technology_id"], name: "index_variants_on_technology_id"

@@ -1,0 +1,12 @@
+<h1>Show Color</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @color.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @color.description %>
+</p>
+<td><%= link_to 'Edit', edit_color_path(@color) %></td>
+<%= link_to 'Back', colors_path %>

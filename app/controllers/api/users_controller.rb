@@ -4,11 +4,11 @@ module Api
     private
 
       def user_params
-        params.require(:user).permit(:email)
+        params.require(:user).permit(:email, :name, :country)
       end
 
       def query_params
-        params.permit(:email)
+        params.permit(:email, :name, :country)
       end
 
   end

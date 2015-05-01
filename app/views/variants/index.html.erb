@@ -1,0 +1,18 @@
+<h1>Listing variants</h1>
+ <%= link_to 'New variant', new_variant_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Diamter</th>
+  </tr>
+ 
+  <% @variants.each do |variant| %>
+    <tr>
+      <td><%= link_to variant.name, variant_path(variant) %></td>
+      <td><%= variant.diameter %></td>
+      <td><%= link_to 'Show', variant_path(variant) %></td>
+      <td><%= link_to 'Edit', edit_variant_path(variant) %></td>
+      <td><%= link_to 'Destroy', variant_path(variant), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

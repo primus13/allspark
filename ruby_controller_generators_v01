@@ -2,6 +2,8 @@ rails g controller countries
 
 rails g controller manufacturers
 
+rails g controller users
+
 rails g controller categories
 
 rails g controller devices
@@ -28,6 +30,12 @@ rails g controller filaments
 
 rails g controller filament_variants
 
+rails g controller filament_colors
+
+rails g controller uniquefilaments
+
 rails g controller user_printers
 
-rails g controller user_filaments
+rails g controller user_uniquefilaments
+
+

@@ -1,0 +1,18 @@
+<h1>Listing technologies</h1>
+ <%= link_to 'New technology', new_technology_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+ 
+  <% @technologies.each do |technology| %>
+    <tr>
+      <td><%= link_to technology.name, technology_path(technology) %></td>
+      
+      <td><%= link_to 'Show', technology_path(technology) %></td>
+      <td><%= link_to 'Edit', edit_technology_path(technology) %></td>
+      <td><%= link_to 'Destroy', technology_path(technology), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
