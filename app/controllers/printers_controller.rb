@@ -45,6 +45,6 @@ class PrintersController < ApplicationController
   
   private
   def printer_params
-    params.require(:printer).permit(:name, :description)
+    params.require(:printer).permit(:manufacturer_id, :category_id, :name, :description)
   end
 end

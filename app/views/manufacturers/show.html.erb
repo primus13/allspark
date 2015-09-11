@@ -8,5 +8,10 @@
   <strong>Description:</strong>
   <%= @manufacturer.description %>
 </p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @manufacturer.country.name if @manufacturer.country %>
+</p>
 <td><%= link_to 'Edit', edit_manufacturer_path(@manufacturer) %></td>
 <%= link_to 'Back', manufacturers_path %>

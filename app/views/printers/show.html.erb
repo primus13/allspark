@@ -1,4 +1,9 @@
 <h1>Show Printer</h1>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @printer.manufacturer.name if @printer.manufacturer %>
+</p>
 <p>
   <strong>Name:</strong>
   <%= @printer.name %>
@@ -7,6 +12,10 @@
 <p>
   <strong>Description:</strong>
   <%= @printer.description %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @printer.category.name if @printer.category %>
 </p>
 <td><%= link_to 'Edit', edit_printer_path(@printer) %></td>
 <%= link_to 'Back', printers_path %>

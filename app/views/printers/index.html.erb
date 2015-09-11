@@ -8,8 +8,10 @@
  
   <% @printers.each do |printer| %>
     <tr>
+    	<td><%= printer.manufacturer.name if printer.manufacturer %></td>
       <td><%= link_to printer.name, printer_path(printer) %></td>
       <td><%= printer.description %></td>
+      <td><%= printer.category.name if printer.category %></td>
       <td><%= link_to 'Show', printer_path(printer) %></td>
       <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
       <td><%= link_to 'Destroy', printer_path(printer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
