@@ -9,6 +9,8 @@ Things you may want to cover:
 
 * System dependencies
 
+  * graphviz required to run railroady (diagram generation)
+
 * Configuration
 
 * Database creation

@@ -53,7 +53,11 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  # Nicely format output in the console
   gem 'awesome_print'
+
+  # Generate SVG diagrams of models and controllers
+  gem 'railroady'
 end
 
 group :development do
