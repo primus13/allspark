@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20150501103550) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "color_families", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "colorfamilies", force: :cascade do |t|
     t.string   "name"
     t.string   "code"
@@ -196,6 +204,18 @@ ActiveRecord::Schema.define(version: 20150501103550) do
   add_index "uniquefilaments", ["color_id"], name: "index_uniquefilaments_on_color_id"
   add_index "uniquefilaments", ["filament_variant_id"], name: "index_uniquefilaments_on_filament_variant_id"
 
+  create_table "user_filament_variants", force: :cascade do |t|
+    t.integer  "user_id",             null: false
+    t.integer  "filament_variant_id", null: false
+    t.integer  "user_printer_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "user_filament_variants", ["filament_variant_id"], name: "index_user_filament_variants_on_filament_variant_id"
+  add_index "user_filament_variants", ["user_id"], name: "index_user_filament_variants_on_user_id"
+  add_index "user_filament_variants", ["user_printer_id"], name: "index_user_filament_variants_on_user_printer_id"
+
   create_table "user_heatbeds", force: :cascade do |t|
     t.integer  "user_id",         null: false
     t.integer  "heatbed_id",      null: false
@@ -319,9 +339,10 @@ ActiveRecord::Schema.define(version: 20150501103550) do
 
   create_table "variants", force: :cascade do |t|
     t.integer  "technology_id", null: false
-    t.string   "name"
+    t.float    "diameter"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "name"
   end
 
   add_index "variants", ["technology_id"], name: "index_variants_on_technology_id"
