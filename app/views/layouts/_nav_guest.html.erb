@@ -1,2 +1,4 @@
 <li><%= link_to "Sign up", new_user_registration_path  %></li>
 <li><%= link_to "Sign in", new_user_session_path  %></li>
+<li><%= link_to "Sign in with Github", user_omniauth_authorize_path(:github)  %></li>
+<li><%= link_to "Sign in with G+", user_omniauth_authorize_path(:gplus)  %></li>

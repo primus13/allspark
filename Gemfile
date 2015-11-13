@@ -41,6 +41,9 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 
 gem "devise"
+gem "omniauth-oauth2", "~> 1.3.1"
+gem "omniauth-github"
+gem "omniauth-gplus", "~> 2.0"
 gem "paperclip", "~> 4.2"
 
 group :development, :test do
@@ -53,7 +56,18 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  # Nicely format output in the console
   gem 'awesome_print'
+
+  # Generate SVG diagrams of models and controllers
+  gem 'railroady'
+
+  # Display footnotes on websites for debugging information
+  gem 'rails-footnotes', '~> 4.0'
+
+  # Better error pages
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 group :development do
