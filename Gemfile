@@ -41,6 +41,9 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 
 gem "devise"
+gem "omniauth-oauth2", "~> 1.3.1"
+gem "omniauth-github"
+gem "omniauth-gplus", "~> 2.0"
 gem "paperclip", "~> 4.2"
 
 group :development, :test do
@@ -58,6 +61,13 @@ group :development, :test do
 
   # Generate SVG diagrams of models and controllers
   gem 'railroady'
+
+  # Display footnotes on websites for debugging information
+  gem 'rails-footnotes', '~> 4.0'
+
+  # Better error pages
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 group :development do
