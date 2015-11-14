@@ -13,6 +13,10 @@ Things you may want to cover:
 
 * Configuration
 
+  * This project uses figaro to configure the GitHub and G+ OAuth clients.
+    For setup run "figaro install". This will generate the file config/application.yml which will not be tracked in git.
+    In this file, set the keys GITHUB_KEY, GITHUB_SECRET, GPLUS_KEY and GPLUS_SECRET to its respective values.
+
 * Database creation
 
 * Database initialization

@@ -1,0 +1,1 @@
+Figaro.require_keys("GITHUB_KEY", "GITHUB_SECRET", "GPLUS_KEY", "GPLUS_SECRET")

@@ -46,6 +46,9 @@ gem "omniauth-github"
 gem "omniauth-gplus", "~> 2.0"
 gem "paperclip", "~> 4.2"
 
+# Secure configuration, run "figaro install" to initialize
+gem "figaro"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
